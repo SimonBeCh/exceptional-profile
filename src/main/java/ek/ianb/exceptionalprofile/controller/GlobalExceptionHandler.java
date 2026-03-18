@@ -30,12 +30,4 @@ public class GlobalExceptionHandler {
         return "error/500";
     }
 
-    @ExceptionHandler(Exception.class)
-    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
-    public String handleUnexpected(Exception ex, Model model) {
-        model.addAttribute("status", HttpStatus.INTERNAL_SERVER_ERROR.value());
-        model.addAttribute("error", HttpStatus.INTERNAL_SERVER_ERROR.getReasonPhrase());
-        model.addAttribute("message", "Something went wrong.");
-        return "error/500";
-    }
 }
