@@ -16,12 +16,12 @@
     <form th:action="${formAction}" th:object="${profile}" method="post">
         <div class="field">
             <label for="name">Name</label>
-            <input id="name" type="text" th:field="*{name}" maxlength="100">
+            <input id="name" type="text"  th:field="*{name}" maxlength="100">
         </div>
 
         <div class="field">
             <label for="email">Email</label>
-            <input id="email" type="email" th:field="*{email}" maxlength="100">
+            <input id="email" type="text"  th:field="*{email}" maxlength="100">
         </div>
 
         <div class="actions">
